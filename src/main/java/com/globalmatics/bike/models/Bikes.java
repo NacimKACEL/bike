@@ -1,5 +1,8 @@
 package com.globalmatics.bike.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +11,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Bikes {
 
     @Id
@@ -20,6 +24,8 @@ public class Bikes {
     private String model;
     private String SerialNumber;
     private BigDecimal purshasePrice;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
     private Date purshaseDate;
     private boolean isContact;
 
