@@ -1,9 +1,19 @@
 package com.globalmatics.bike.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
+@Entity
 public class Bikes {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String name;
     private String email;
     private String phone;
@@ -75,5 +85,13 @@ public class Bikes {
 
     public void setContact(boolean contact) {
         isContact = contact;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
