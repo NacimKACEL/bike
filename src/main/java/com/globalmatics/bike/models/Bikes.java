@@ -3,7 +3,7 @@ package com.globalmatics.bike.models;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Bike {
+public class Bikes {
     private String name;
     private String email;
     private String phone;
