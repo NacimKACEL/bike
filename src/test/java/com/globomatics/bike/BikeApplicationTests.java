@@ -1,4 +1,4 @@
-package com.globalmatics.bike;
+package com.globomatics.bike;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
