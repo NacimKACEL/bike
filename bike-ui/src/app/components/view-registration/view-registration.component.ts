@@ -17,13 +17,13 @@ export class ViewRegistrationComponent implements OnInit {
     this.getBikeReg(this.route.snapshot.params.id);
   }
 
-  getBikeReg(id:number) {
+  getBikeReg(id: number) {
     this.bikeService.getBike(id).subscribe(
       data => {
         this.bikeReg = data;
       },
-      err => console.log(err),
-      () => console.log('bike loaded')
+      err => console.error(err),
+      () => console.log('bikes loaded')
     );
   }
 
